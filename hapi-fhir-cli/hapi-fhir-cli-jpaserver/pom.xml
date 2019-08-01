@@ -90,6 +90,11 @@
 			<artifactId>commons-cli</artifactId>
 		</dependency>
 
+		<dependency>
+			   <groupId>mysql</groupId>
+	        	   <artifactId>mysql-connector-java</artifactId>
+			   <version>5.1.36</version>
+		</dependency>
 		<!-- This example uses Derby embedded database. If you are using another database such as Mysql or Oracle, you may omit the following dependencies and replace them with an appropriate database client 
 			dependency for your database platform. -->
 		<dependency>
