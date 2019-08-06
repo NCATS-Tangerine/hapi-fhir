@@ -29,7 +29,7 @@ package org.hl7.fhir.r4.model;
   
 */
 
-// Generated on Mon, Jul 29, 2019 11:29-0500 for FHIR v4.1.0
+// Generated on Tue, Aug 6, 2019 11:02-0500 for FHIR v4.1.0
 
 import java.util.*;
 
@@ -2815,11 +2815,11 @@ public class ClinicalProfile extends DomainResource {
         /**
          * Correlation entry.
          */
-        @Child(name = "entry", type = {}, order=3, min=0, max=1, modifier=false, summary=false)
+        @Child(name = "entry", type = {}, order=3, min=0, max=Child.MAX_UNLIMITED, modifier=false, summary=false)
         @Description(shortDefinition="Correlation entry", formalDefinition="Correlation entry." )
-        protected ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent entry;
+        protected List<ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent> entry;
 
-        private static final long serialVersionUID = -243774208L;
+        private static final long serialVersionUID = 350067052L;
 
     /**
      * Constructor
@@ -2943,32 +2943,61 @@ public class ClinicalProfile extends DomainResource {
         /**
          * @return {@link #entry} (Correlation entry.)
          */
-        public ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent getEntry() { 
+        public List<ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent> getEntry() { 
           if (this.entry == null)
-            if (Configuration.errorOnAutoCreate())
-              throw new Error("Attempt to auto-create ClinicalProfileLabScalarDistributionCorrelatedDiagnosesComponent.entry");
-            else if (Configuration.doAutoCreate())
-              this.entry = new ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent(); // cc
+            this.entry = new ArrayList<ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent>();
           return this.entry;
         }
 
+        /**
+         * @return Returns a reference to <code>this</code> for easy method chaining
+         */
+        public ClinicalProfileLabScalarDistributionCorrelatedDiagnosesComponent setEntry(List<ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent> theEntry) { 
+          this.entry = theEntry;
+          return this;
+        }
+
         public boolean hasEntry() { 
-          return this.entry != null && !this.entry.isEmpty();
+          if (this.entry == null)
+            return false;
+          for (ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent item : this.entry)
+            if (!item.isEmpty())
+              return true;
+          return false;
+        }
+
+        public ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent addEntry() { //3
+          ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent t = new ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent();
+          if (this.entry == null)
+            this.entry = new ArrayList<ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent>();
+          this.entry.add(t);
+          return t;
+        }
+
+        public ClinicalProfileLabScalarDistributionCorrelatedDiagnosesComponent addEntry(ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent t) { //3
+          if (t == null)
+            return this;
+          if (this.entry == null)
+            this.entry = new ArrayList<ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent>();
+          this.entry.add(t);
+          return this;
         }
 
         /**
-         * @param value {@link #entry} (Correlation entry.)
+         * @return The first repetition of repeating field {@link #entry}, creating it if it does not already exist
          */
-        public ClinicalProfileLabScalarDistributionCorrelatedDiagnosesComponent setEntry(ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent value) { 
-          this.entry = value;
-          return this;
+        public ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent getEntryFirstRep() { 
+          if (getEntry().isEmpty()) {
+            addEntry();
+          }
+          return getEntry().get(0);
         }
 
         protected void listChildren(List<Property> children) {
           super.listChildren(children);
           children.add(new Property("topn", "integer", "Number of diagnoses cutoff (e.g. top 10).", 0, 1, topn));
           children.add(new Property("abscorrelation", "decimal", "Minimum absolute value of correlation coefficient.", 0, 1, abscorrelation));
-          children.add(new Property("entry", "", "Correlation entry.", 0, 1, entry));
+          children.add(new Property("entry", "", "Correlation entry.", 0, java.lang.Integer.MAX_VALUE, entry));
         }
 
         @Override
@@ -2976,7 +3005,7 @@ public class ClinicalProfile extends DomainResource {
           switch (_hash) {
           case 3566009: /*topn*/  return new Property("topn", "integer", "Number of diagnoses cutoff (e.g. top 10).", 0, 1, topn);
           case -1112161840: /*abscorrelation*/  return new Property("abscorrelation", "decimal", "Minimum absolute value of correlation coefficient.", 0, 1, abscorrelation);
-          case 96667762: /*entry*/  return new Property("entry", "", "Correlation entry.", 0, 1, entry);
+          case 96667762: /*entry*/  return new Property("entry", "", "Correlation entry.", 0, java.lang.Integer.MAX_VALUE, entry);
           default: return super.getNamedProperty(_hash, _name, _checkValid);
           }
 
@@ -2987,7 +3016,7 @@ public class ClinicalProfile extends DomainResource {
         switch (hash) {
         case 3566009: /*topn*/ return this.topn == null ? new Base[0] : new Base[] {this.topn}; // IntegerType
         case -1112161840: /*abscorrelation*/ return this.abscorrelation == null ? new Base[0] : new Base[] {this.abscorrelation}; // DecimalType
-        case 96667762: /*entry*/ return this.entry == null ? new Base[0] : new Base[] {this.entry}; // ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent
+        case 96667762: /*entry*/ return this.entry == null ? new Base[0] : this.entry.toArray(new Base[this.entry.size()]); // ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent
         default: return super.getProperty(hash, name, checkValid);
         }
 
@@ -3003,7 +3032,7 @@ public class ClinicalProfile extends DomainResource {
           this.abscorrelation = castToDecimal(value); // DecimalType
           return value;
         case 96667762: // entry
-          this.entry = (ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent) value; // ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent
+          this.getEntry().add((ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent) value); // ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent
           return value;
         default: return super.setProperty(hash, name, value);
         }
@@ -3017,7 +3046,7 @@ public class ClinicalProfile extends DomainResource {
         } else if (name.equals("abscorrelation")) {
           this.abscorrelation = castToDecimal(value); // DecimalType
         } else if (name.equals("entry")) {
-          this.entry = (ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent) value; // ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent
+          this.getEntry().add((ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent) value);
         } else
           return super.setProperty(name, value);
         return value;
@@ -3028,7 +3057,7 @@ public class ClinicalProfile extends DomainResource {
         switch (hash) {
         case 3566009:  return getTopnElement();
         case -1112161840:  return getAbscorrelationElement();
-        case 96667762:  return getEntry(); 
+        case 96667762:  return addEntry(); 
         default: return super.makeProperty(hash, name);
         }
 
@@ -3054,8 +3083,7 @@ public class ClinicalProfile extends DomainResource {
           throw new FHIRException("Cannot call addChild on a primitive type ClinicalProfile.abscorrelation");
         }
         else if (name.equals("entry")) {
-          this.entry = new ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent();
-          return this.entry;
+          return addEntry();
         }
         else
           return super.addChild(name);
@@ -3071,7 +3099,11 @@ public class ClinicalProfile extends DomainResource {
         super.copyValues(dst);
         dst.topn = topn == null ? null : topn.copy();
         dst.abscorrelation = abscorrelation == null ? null : abscorrelation.copy();
-        dst.entry = entry == null ? null : entry.copy();
+        if (entry != null) {
+          dst.entry = new ArrayList<ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent>();
+          for (ClinicalProfileLabScalarDistributionCorrelatedDiagnosesEntryComponent i : entry)
+            dst.entry.add(i.copy());
+        };
       }
 
       @Override
@@ -9505,7 +9537,10 @@ public class ClinicalProfile extends DomainResource {
 
   }
 
-      public ClinicalProfile copy() {
+//   public Event getEvent() {
+//     return new ClinicalProfileEventImpl(this);
+//   }
+     public ClinicalProfile copy() {
         ClinicalProfile dst = new ClinicalProfile();
         copyValues(dst);
         return dst;
