@@ -20,4 +20,4 @@ RUN chmod +x hapi-fhir-cli
 
 # disable-referential-integrity  - Allow resources to be entered even when the resources they reference don't exist
 # allow-external-refs - Allow resources to contain references to resources outside of the current system
-ENTRYPOINT ./hapi-fhir-cli run-server -v r4 --allow-external-refs --disable-referential-integrity -p $PORT
+ENTRYPOINT /bin/bash -c "export CLI_OPTS=-Xmx4g && ./hapi-fhir-cli run-server -v r4 --allow-external-refs --disable-referential-integrity -p $PORT"
