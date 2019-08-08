@@ -54,7 +54,7 @@ public class VersionPropertyFileGeneratorMojo extends AbstractMojo {
 		}
 
 		Assert.isTrue(components.size() > 50, "Only have " + components.size() + " components");
-
+		System.out.println("Doing the MOJO thing");
 		for (ClassPath.ClassInfo next : components) {
 
 			Class<?> clazz = next.load();
