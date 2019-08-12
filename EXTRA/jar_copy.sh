@@ -1,0 +1,17 @@
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-converter/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-tinder-plugin/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-testpage-overlay/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-structures-r5/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-spring-boot/hapi-fhir-spring-boot-autoconfigure/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-spring-boot/hapi-fhir-spring-boot-samples/hapi-fhir-spring-boot-sample-server-jpa/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-igpacks/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-jpaserver-searchparam/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-jpaserver-subscription/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-validation/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../examples/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-jpaserver-base/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-jpaserver-migrate/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-cli/hapi-fhir-cli-jpaserver/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-cli/hapi-fhir-cli-api/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-cli/hapi-fhir-cli-app/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
+cp org.hl7.fhir.r5-SNAPSHOT.jar  ../hapi-fhir-jpaserver-uhnfhirtest/target/dependency/org.hl7.fhir.r5-3.8.23-SNAPSHOT.jar
